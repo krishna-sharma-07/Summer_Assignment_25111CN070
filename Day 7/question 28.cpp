@@ -1,0 +1,16 @@
+// write a program to recursive reverse number //
+#include<iostream>
+using namespace std;
+int reverseNum(int n, int rev = 0) {
+    if (n == 0){
+        return rev;
+    }
+    return reverseNum(n / 10, rev * 10 + ( n % 10));
+}
+int main(){
+    int n;
+    cout << " enter a number: ";
+    cin >> n;
+    cout << " reversed number: " << reverseNum(n);
+    return 0;
+}
