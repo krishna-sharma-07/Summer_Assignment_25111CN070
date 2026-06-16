@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int arr[] = {1, 2, 2, 3, 4, 4};
+    int n = 6;
+    for(int i = 0; i < n; i++){
+        bool isDuplicate = false;
+        for(int j = 0; j < i; j++){
+            if(arr[i] == arr[j]){
+                isDuplicate = true;
+                break;
+            }
+        }
+        if(!isDuplicate)
+        cout << arr[i] << " ";
+    }
+    return 0;
+}
